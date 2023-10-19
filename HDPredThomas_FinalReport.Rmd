@@ -35,10 +35,11 @@ set.seed(1234567890)
 
 <!-- 
 
-#########################################################
-EXPLORATORY DATA ANALYSIS SECTION POLISHED FOR THE REPORT
-DO NOT INCLUDE IF ANYONE HAS WRITTEN FOR THIS SECTION
-#########################################################
+#############################
+EXPLORATORY DATA ANALYSIS 
+#############################
+
+-->
 
 # Exploratory Data Analysis
 
@@ -185,7 +186,6 @@ knitr::kable(pvalADlog, booktabs=TRUE,
 ```
 
 Transforming cholesterol and blood pressure give better p-values for testing whether or not the distribution of the log-transformed data is normal, so log-transformations to cholesterol and blood pressure should be applied.
--->
 
 # Heart disease prediction
 
