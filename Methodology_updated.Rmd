@@ -1,0 +1,21 @@
+# Methodology
+
+## Exploratory Data Analysis (EDA)
+
+A preliminary EDA will be done on the variables that were decided to be analysed. Histograms, notched boxplots and Q-Q plots for age, blood pressure, cholesterol levels, and maximum heart rate will be made to analyse the distribution of these variables. The covariance matrix and correlogram of the predictor values will be used to identify any possible relationships between them. Anderson-Darling tests for normality will be used to determine if assumptions of normality on the distribution of our predictor variables, that are required for various analytical techniques such as linear discriminant analysis, are met. If assumptions for normality are not met, transformations will need to be applied to the data, then tested again to see if the transformed data more closely resembles a normal distribution.
+
+## Linear Discriminant Analysis
+
+To answer our research questions, we decided to use linear discriminant analysis to predict the presence of heart disease using the numerical variables analyzed in the EDA, alongside sex and chest pain type as factors of interest. Since we have two distinct levels of heart disease, presence and absence, and these are known for all observations, we deemed linear discriminant analysis a possible avenue for prediction analysis. Linear discriminant analysis requires that covariance matrices are equal, and that data is normally distributed - these will be tested to see if the assumptions for linear discriminant analysis hold. Cluster analysis was deemed not useful for answering our questions, as we saw that technique better used for classifying data when the true value of the class, i.e. whether heart disease was present or not, was unknown to us. 
+
+## Bayesian Classification
+
+It was unknown whether or not the difference in prior probabilities of being assigned heart disease, obtained from the data to be $\approx 44.4\%$ and $\approx 55.6\%$ for presence and absence respectively, would affect the results of our linear discriminant analysis. To be cautious, we decided we will perform a Bayesian classification analysis, assuming that data for each predictor belongs to the Gaussian Normal distribution. This technique accounts for the difference in prior probabilities, and does not use strictly linear discriminants, and would yield potentially different results to the linear discriminant analysis. 
+
+## Interaction
+
+To answer our second research question, if there are any differences in heart disease prediction accuracy due to differences in sex, we induced 4 classes of heart disease and sex interaction. Namely, these are males with heart disease, females with heart disease, males without heart disease, and females without heart disease. We will then use both linear discriminant analysis and Bayesian classifiers assuming predictor values belong to the Gaussian normal distribution, to see whether heart disease prediction differs between sex, i.e. if models are more accurate at classifying one sex than the other.
+
+## Comparisons
+
+For both research questions, the effectiveness of linear discriminant analysis and Bayesian classifiers will be compared using confusion matrices on a test sample set of the data, partition matrix plots, and relevant statistics obtained from the confusion matrices. These relevant statistics include sensitivity, or true positive rate, specificity, or true negative rate, overall and balanced accuracies, and if these models are significantly better predictors of heart disease than randomly classifying values based on prior probabilities, i.e. the No Information Rate. The model with the higher accuracies, and which makes the least mistakes, will be chosen as the preferred between the two approaches of linear discriminant analysis and Bayesian classification.
