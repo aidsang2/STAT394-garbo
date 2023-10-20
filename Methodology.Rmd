@@ -1,0 +1,17 @@
+# Methodology
+
+## Exploratory Data Analysis (EDA)
+
+A preliminary EDA was done in order to determine which variables were most relevant in predicting Heart Disease. For the EDA, we produced histograms, notched boxplots and Q-Q plots for the following numerical variables: Age, BP, Cholesterol, Max.HR and ST.Depression. We then generated the covariance and correlation matrices which helped identify any possible relationships between these numerical variables. A test for normality was also done to determine the best possible way of analyzing the data further and whether or not a data transformation was necessary.
+
+## LDA 
+
+To answer our first research question, we used Linear Discriminant Analysis to predict the presence of Heart Disease using the numerical variables analyzed in our EDA with sex and chest pain type as factors. This was done by initially using a pairs plot, histogram and confusion matrix.
+
+## Bayesian Classification
+
+Following from the LDA, we used the same variables to try and predict the presence of Heart Disease using a Bayesian Classifier. This was done to investigate the potential of misclassification due to differences in prior probabilities of the presence and absence of Heart Disease.
+
+## Interaction
+
+After further research into potential differences due to sex, we then investigated potentially better ways to predict Heart Disease. This was done by inducing 4 classes into our data using the presence of Heart Disease interacting with Sex. We then used both the LDA and Bayesian Classifier to see whether we are able to more accurately predict the presence of Heart Disease for both males and females.
